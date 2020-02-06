@@ -14,8 +14,8 @@
       <h1 class="col-5">Student Grade Table</h1>
       <h2 class="col-4">Average Grade <span class="badge badge-secondary"></span></h2>
     </header>
-    <main class="col-12">
-      <table class="table col-8">
+    <main class="col-12 d-flex">
+      <table class="table col-7">
         <thead>
           <th scope="col">Student Name</th>
           <th scope="col">Course</th>
@@ -26,7 +26,28 @@
         </tbody>
       </table>
       <form action="" class="col-4">
-
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">@</span>
+          </div>
+          <input type="text" placeholder="Name">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">@</span>
+          </div>
+          <input type="text" placeholder="Course">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">@</span>
+          </div>
+          <input type="text" placeholder="Grade">
+        </div>
+        <div>
+          <button type="submit" class="btn btn-outline-success">Add</button>
+          <button type="reset" class="btn btn-outline-danger">Cancel</button>
+        </div>
       </form>
     </main>
   </div>
