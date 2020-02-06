@@ -13,6 +13,7 @@ class GradeForm {
     var name = formData.get("name");
     var course = formData.get("course");
     var grade = formData.get("grade");
-
+    this.createGrade(name, course, grade);
+    event.target.reset();
   }
 }
