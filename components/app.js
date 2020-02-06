@@ -10,6 +10,13 @@ class App {
   }
   handleGetGradesSuccess(grades) {
     this.gradeTable.updateGrades(grades);
+    var gradeSum = 0;
+    var gradeAverage = 0;
+    for (var i = 0; i < grades.length; i++) {
+      gradeSum += grades[i].grade;
+    }
+    gradeAverage = gradeSum / grades.length;
+    this.pageHeader.updateAverage(gradeAverage);
   }
   getGrades() {
     $.ajax({
