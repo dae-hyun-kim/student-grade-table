@@ -23,4 +23,26 @@ class GradeTable {
   onDeleteClick(deleteGrade) {
     this.deleteGrade = deleteGrade;
   }
+  renderGradeRow(data, deleteGrade) {
+    var tableRow = document.createElement("tr");
+    var tableDataName = document.createElement("td");
+    var tableDataCourse = document.createElement("td");
+    var tableDataGrade = document.createElement("td");
+    var tableDataDelete = document.createElement("td");
+    var tableDeleteButton = document.createElement("button");
+    tableDeleteButton.classList.add("btn", "btn-danger");
+    tableDeleteButton.textContent = "DELETE"
+    tableDeleteButton.addEventListener("click", deleteGrade(data.id))
+    tableDataDelete.appendChild(tableDeleteButton);
+
+    tableDataName.textContent = data.name;
+    tableDataCourse.textContent = data.course;
+    tableDataGrade.textContent = data.grade;
+
+    tableRow.appendChild(tableDataName);
+    tableRow.appendChild(tableDataCourse);
+    tableRow.appendChild(tableDataGrade);
+
+    return tableRow;
+  }
 }
