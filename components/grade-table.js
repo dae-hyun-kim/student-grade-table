@@ -27,12 +27,14 @@ class GradeTable {
     var tableDataCourse = document.createElement("td");
     var tableDataGrade = document.createElement("td");
     var tableDataDelete = document.createElement("td");
-    var tableDeleteButton = document.createElement("button");
-    tableDeleteButton.classList.add("btn", "btn-danger", "btn-sm");
-    tableDeleteButton.textContent = "DELETE"
+    var tableDeleteButton = document.createElement("i");
+    var tableUpdateButton = document.createElement("i");
+    tableDeleteButton.classList.add("fas", "fa-trash", "mr-3");
+    tableUpdateButton.classList.add("fas", "fa-edit", "mr-3")
     tableDeleteButton.addEventListener("click", function(){
       deleteGrade(data.id);
     })
+    tableDataDelete.appendChild(tableUpdateButton);
     tableDataDelete.appendChild(tableDeleteButton);
 
     tableDataName.textContent = data.name;

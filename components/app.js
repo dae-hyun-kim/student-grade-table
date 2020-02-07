@@ -22,7 +22,7 @@ class App {
     for (var i = 0; i < grades.length; i++) {
       gradeSum += grades[i].grade;
     }
-    gradeAverage = gradeSum / grades.length;
+    gradeAverage = (Math.round((gradeSum / grades.length) * 10) / 10);
     this.pageHeader.updateAverage(gradeAverage);
   }
   getGrades() {

@@ -12,10 +12,10 @@
 <body>
   <div class="container mt-5">
     <header class="row justify-content-between">
-      <h1 class="col-5">Student Grade Table</h1>
-      <h2 class="col-4">Average Grade <span class="badge badge-secondary"></span></h2>
+      <h1>Student Grade Table</h1>
+      <h2>Average Grade <span class="badge badge-secondary"></span></h2>
     </header>
-    <main class="row col-12 d-flex justify-content-around mt-3">
+    <main class="row d-flex justify-content-around mt-3">
       <table class="table col-7">
         <thead>
           <th scope="col">Student Name</th>
@@ -26,8 +26,9 @@
         <tbody>
 
         </tbody>
+        <td colspan= "4" id="no-grades" class="d-none text-center">NO GRADES RECORDED</td>
       </table>
-      <form action="" class="col-4">
+      <form action="" class="col-4 form">
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text"><i class="fas fa-user"></i></span>
@@ -52,7 +53,6 @@
         </div>
       </form>
     </main>
-    <p id="no-grades" class="d-none">NO GRADES RECORDED</p>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
