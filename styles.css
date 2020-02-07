@@ -1,3 +1,12 @@
 #no-grades {
   font-size: 2em;
 }
+
+.fa-trash {
+  color: red;
+}
+
+.fa-trash:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+}
