@@ -31,7 +31,7 @@ class App {
       error: this.handleGetGradesError,
     })
   }
-  createGrade(name, course, grade) {
+  createGrade(name, course, grade){
     $.ajax({
       method: "POST",
       url: "http://sgt.lfzprototypes.com/api/grades",
