@@ -6,7 +6,13 @@ class GradeTable {
   }
   updateGrades(grades) {
     var tableBody = this.tableElement.querySelector("tbody");
+    var noGrades = document.getElementById("no-grades");
     tableBody.textContent = "";
+    if (grades.length === 0) {
+      noGrades.classList.remove("d-none");
+    } else {
+      noGrades.classList.add("d-none");
+    }
     for (var i = 0; i < grades.length; i++) {
       this.renderGradeRow(grades[i], this.deleteGrade);
     }
