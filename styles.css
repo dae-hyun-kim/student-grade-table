@@ -10,3 +10,33 @@
 .table > tbody > tr:nth-child(2n+1) {
   background: lightgray;
 }
+
+@media (max-width: 576px) {
+  header h1, header h2 {
+    width: 100%;
+    text-align: center;
+  }
+  .table {
+    flex: 0 0 90%;
+    max-width: 90%;
+  }
+  .form {
+    flex: 0 0 70%;
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  header h1, header h2 {
+    width: 100%;
+    text-align: center;
+  }
+  .table {
+    flex: 0 0 90%;
+    max-width: 90%;
+  }
+  .form {
+    flex: 0 0 70%;
+    max-width: 70%;
+  }
+}
