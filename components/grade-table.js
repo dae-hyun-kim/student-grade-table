@@ -36,12 +36,17 @@ class GradeTable {
     })
 
     tableUpdateButton.addEventListener("click", function(){
+      var addButton = document.querySelector(".add-button");
+      var updateButton = document.querySelector(".update-button");
       var nameInputField = document.querySelector(".nameInput");
       var courseInputField = document.querySelector(".courseInput");
       var gradeInputField = document.querySelector(".gradeInput");
+      updateButton.setAttribute("data-id", data.id);
       nameInputField.value = data.name;
       courseInputField.value = data.course;
       gradeInputField.value = data.grade;
+      addButton.classList.add("d-none");
+      updateButton.classList.remove("d-none");
     })
 
     tableDataDelete.appendChild(tableUpdateButton);
