@@ -34,6 +34,16 @@ class GradeTable {
     tableDeleteButton.addEventListener("click", function(){
       deleteGrade(data.id);
     })
+
+    tableUpdateButton.addEventListener("click", function(){
+      var nameInputField = document.querySelector(".nameInput");
+      var courseInputField = document.querySelector(".courseInput");
+      var gradeInputField = document.querySelector(".gradeInput");
+      nameInputField.value = data.name;
+      courseInputField.value = data.course;
+      gradeInputField.value = data.grade;
+    })
+
     tableDataDelete.appendChild(tableUpdateButton);
     tableDataDelete.appendChild(tableDeleteButton);
 
