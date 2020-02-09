@@ -29,11 +29,26 @@ class GradeTable {
     var tableDataDelete = document.createElement("td");
     var tableDeleteButton = document.createElement("i");
     var tableUpdateButton = document.createElement("i");
-    tableDeleteButton.classList.add("fas", "fa-trash", "mr-3");
-    tableUpdateButton.classList.add("fas", "fa-edit", "mr-3")
+    tableDeleteButton.classList.add("fas", "fa-trash", "mr-4");
+    tableUpdateButton.classList.add("fas", "fa-edit", "mr-4")
     tableDeleteButton.addEventListener("click", function(){
       deleteGrade(data.id);
     })
+
+    tableUpdateButton.addEventListener("click", function(){
+      var addButton = document.querySelector(".add-button");
+      var updateButton = document.querySelector(".update-button");
+      var nameInputField = document.querySelector(".nameInput");
+      var courseInputField = document.querySelector(".courseInput");
+      var gradeInputField = document.querySelector(".gradeInput");
+      updateButton.setAttribute("data-id", data.id);
+      nameInputField.value = data.name;
+      courseInputField.value = data.course;
+      gradeInputField.value = data.grade;
+      addButton.classList.add("d-none");
+      updateButton.classList.remove("d-none");
+    })
+
     tableDataDelete.appendChild(tableUpdateButton);
     tableDataDelete.appendChild(tableDeleteButton);
 
